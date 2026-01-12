@@ -1,0 +1,249 @@
+/* XIANXIA THEME for OGS - Lóng Xiāo */
+/* Host this file on GitHub Pages and link it in your OGS profile */
+
+.xianxia-profile * {
+    box-sizing: border-box;
+}
+
+.xianxia-profile {
+    font-family: 'Segoe UI', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+    color: #e6e0c8;
+    background: linear-gradient(135deg, rgba(10, 15, 35, 0.97) 0%, rgba(25, 40, 70, 0.93) 50%, rgba(15, 25, 50, 0.97) 100%);
+    border: 1px solid #5d4a2a;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7), 0 0 40px rgba(100, 150, 255, 0.15);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* ===== ANIMATED BACKGROUND ELEMENTS ===== */
+.xianxia-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Mist Effect */
+.mist {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, transparent 30%, rgba(150, 180, 255, 0.03) 80%);
+    animation: mist-flow 25s infinite linear;
+}
+
+/* Distant Mountains */
+.mountain-range {
+    position: absolute;
+    bottom: 0;
+    width: 120%;
+    height: 200px;
+    left: -10%;
+    background: linear-gradient(to top, rgba(20, 30, 60, 0.85) 0%, transparent 100%);
+    clip-path: polygon(0% 100%, 2% 85%, 5% 92%, 10% 78%, 15% 90%, 20% 70%, 30% 88%, 40% 65%, 50% 82%, 60% 60%, 70% 75%, 80% 55%, 90% 70%, 95% 50%, 100% 65%, 100% 100%);
+}
+
+/* Floating Clouds */
+.floating-cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 100px / 40px;
+    filter: blur(1px);
+    animation: cloud-drift 45s infinite linear;
+}
+.cloud-1 { width: 140px; height: 45px; top: 15%; left: -150px; animation-delay: 0s; }
+.cloud-2 { width: 200px; height: 55px; top: 35%; left: -200px; animation-delay: 15s; }
+.cloud-3 { width: 110px; height: 40px; top: 55%; left: -180px; animation-delay: 30s; }
+
+/* Magical Lanterns */
+.floating-lantern {
+    position: absolute;
+    width: 42px;
+    height: 65px;
+    background: radial-gradient(circle at 30% 30%, #ffcc00 0%, #ff6600 70%, transparent 90%);
+    border-radius: 50% 50% 45% 45%;
+    animation: lantern-float 18s infinite ease-in-out;
+    filter: blur(0.8px) drop-shadow(0 0 8px #ff9900);
+    z-index: 1;
+}
+.lantern-1 { top: 10%; right: 12%; animation-delay: 0s; }
+.lantern-2 { top: 40%; right: 22%; animation-delay: 9s; }
+.lantern-3 { top: 70%; right: 15%; animation-delay: 4s; }
+
+/* Falling Blossoms */
+.blossom {
+    position: absolute;
+    color: rgba(255, 200, 230, 0.7);
+    font-size: 22px;
+    animation: blossom-fall 20s infinite linear;
+    z-index: 1;
+    user-select: none;
+}
+.blossom-1 { left: 10%; animation-delay: 0s; }
+.blossom-2 { left: 25%; animation-delay: 5s; }
+.blossom-3 { left: 50%; animation-delay: 10s; }
+.blossom-4 { left: 75%; animation-delay: 15s; }
+.blossom-5 { left: 90%; animation-delay: 7s; }
+
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes cloud-drift {
+    0% { transform: translateX(0) translateY(0); opacity: 0; }
+    5% { opacity: 0.4; }
+    90% { opacity: 0.4; }
+    100% { transform: translateX(calc(100vw + 300px)) translateY(20px); opacity: 0; }
+}
+
+@keyframes lantern-float {
+    0%, 100% { transform: translateY(0px) rotate(-1deg) scale(1); }
+    25% { transform: translateY(-25px) rotate(1deg) scale(1.05); }
+    50% { transform: translateY(-10px) rotate(-0.5deg) scale(1); }
+    75% { transform: translateY(-30px) rotate(2deg) scale(1.03); }
+}
+
+@keyframes blossom-fall {
+    0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes mist-flow {
+    0% { background-position: 0px 0px; }
+    100% { background-position: 0px 1000px; }
+}
+
+@keyframes title-glow {
+    0%, 100% { text-shadow: 0 0 15px #8a7850, 0 0 25px #8a7850, 0 0 5px #ffcc00; }
+    50% { text-shadow: 0 0 25px #ffcc00, 0 0 40px #ff9900, 0 0 15px #ff6600; }
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes border-glow {
+    0%, 100% { box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7), 0 0 40px rgba(100, 150, 255, 0.15), 0 0 0 1px rgba(138, 120, 80, 0.3); }
+    50% { box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.7), 0 0 60px rgba(150, 180, 255, 0.25), 0 0 0 1px rgba(255, 204, 0, 0.5); }
+}
+
+/* ===== PROFILE CONTENT STYLING ===== */
+.profile-header {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(138, 120, 80, 0.4);
+    position: relative;
+    z-index: 2;
+    animation: fade-in-up 1.2s ease-out;
+}
+
+.player-title {
+    font-size: 3.2em;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    background: linear-gradient(135deg, #f2e6c9 10%, #b8a87d 45%, #8a7850 80%, #ffcc00 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: title-glow 4s infinite alternate ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.player-subtitle {
+    font-size: 1.3em;
+    font-style: italic;
+    color: #b8a87d;
+    margin-top: 5px;
+    letter-spacing: 1.5px;
+}
+
+.quote-box {
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+    background: rgba(30, 35, 60, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid #ffcc00;
+    border-right: 4px solid #ffcc00;
+    margin: 25px auto;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fade-in-up 1.8s ease-out 0.3s both;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+    animation: fade-in-up 2.2s ease-out 0.6s both;
+}
+
+.profile-section {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(20, 25, 45, 0.75);
+    border-radius: 10px;
+    padding: 25px;
+    border-top: 1px solid rgba(138, 120, 80, 0.2);
+    border-left: 4px solid #8a7850;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+.profile-section:hover {
+    transform: translateY(-5px);
+}
+
+.section-title {
+    color: #ffcc00;
+    font-size: 1.5em;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(138, 120, 80, 0.4);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.section-title:before {
+    font-size: 1.3em;
+}
+
+.go-journey .section-title:before { content: "☯"; }
+.cultivation .section-title:before { content: "🌀"; }
+.techniques .section-title:before { content: "⚔"; }
+
+.sigil {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 1em;
+    color: #b8a87d;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    animation: fade-in-up 2.5s ease-out;
+    padding: 15px;
+    border-top: 1px solid rgba(138, 120, 80, 0.3);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+    .xianxia-profile { padding: 20px; margin: 10px; }
+    .player-title { font-size: 2.3em; letter-spacing: 2px; }
+    .profile-content { flex-direction: column; }
+    .profile-section { min-width: 100%; }
+    .floating-lantern { transform: scale(0.7); }
+  }
