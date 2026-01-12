@@ -1,0 +1,82 @@
+/* OGS FULL-PAGE XIANXIA THEME CSS */
+/* Upload this to your GitHub Pages and link it in your OGS "About" section */
+
+/* === 1. Global Page Background & Text === */
+body, #content, .ogs-container {
+    background: linear-gradient(135deg, #0a0b16 0%, #1a1a2e 50%, #0f1120 100%) fixed !important;
+    color: #f0e6d2 !important;
+    font-family: 'Segoe UI', 'Noto Sans SC', sans-serif !important;
+}
+
+/* === 2. Header & Navigation Bar === */
+.navbar, .navbar-inverse, .player-card {
+    background-color: rgba(20, 25, 45, 0.95) !important;
+    border-bottom: 1px solid #8a7850 !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5) !important;
+}
+.player-username {
+    color: #ffcc00 !important;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.7) !important;
+}
+
+/* === 3. Sidebar & Content Cards === */
+.sidebar, .card, .profile-content-wrapper {
+    background-color: rgba(30, 35, 60, 0.9) !important;
+    border: 1px solid #5d4a2a !important;
+    border-radius: 8px !important;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* === 4. Buttons === */
+.btn-primary, .btn-success {
+    background: linear-gradient(to bottom, #8a7850, #5d4a2a) !important;
+    border-color: #b8a87d !important;
+    color: #fff !important;
+}
+.btn-primary:hover, .btn-success:hover {
+    background: linear-gradient(to bottom, #b8a87d, #8a7850) !important;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.4) !important;
+}
+
+/* === 5. Tables (Game History) === */
+.table, .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(40, 45, 70, 0.8) !important;
+    color: #e6d8b8 !important;
+    border-color: #444455 !important;
+}
+.table-hover tbody tr:hover {
+    background-color: rgba(138, 120, 80, 0.3) !important;
+}
+
+/* === 6. Links === */
+a, .nav-link {
+    color: #b8a87d !important;
+}
+a:hover, .nav-link:hover, .nav-link.active {
+    color: #ffdd99 !important;
+}
+
+/* === 7. Enhance Your Custom "About" Box === */
+/* This adds a glowing border to your existing Xianxia box */
+.xianxia-profile {
+    border: 2px solid transparent !important;
+    background: linear-gradient(rgba(20, 25, 45, 0.95), rgba(20, 25, 45, 0.95)) padding-box,
+                linear-gradient(135deg, #8a7850, #ffcc00, #8a7850) border-box !important;
+    animation: border-glow 3s ease-in-out infinite alternate !important;
+}
+
+/* === 8. Animations === */
+@keyframes border-glow {
+    from { box-shadow: 0 5px 20px rgba(138, 120, 80, 0.5); }
+    to { box-shadow: 0 5px 30px rgba(255, 204, 0, 0.7); }
+}
+
+@keyframes subtle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Add floating animation to main titles */
+.player-title, .section-title {
+    animation: subtle-float 5s infinite ease-in-out;
+}
